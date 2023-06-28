@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F602F9D-6A9C-4A71-98EE-8039B2EAD9FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Minecire_Helper</RootNamespace>
+    <AssemblyName>Minecire Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Celeste">
+      <HintPath>..\..\Celeste.exe</HintPath>
+    </Reference>
+    <Reference Include="FNA">
+      <HintPath>..\..\FNA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MMHOOK_Celeste">
+      <HintPath>..\..\MMHOOK_Celeste.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod">
+      <HintPath>..\..\MonoMod.exe</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\..\YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\BronzeBerry.cs" />
+    <Compile Include="Entities\SingleSpike.cs" />
+    <Compile Include="Entities\StrawberryHooks.cs" />
+    <Compile Include="Entities\ThreeDigitSummitCheckpoint.cs" />
+    <Compile Include="Entities\WideCustomSummitCheckpoint.cs" />
+    <Compile Include="Entities\CustomSummitCheckpoint.cs" />
+    <Compile Include="MinecireHelperMapDataProcessor.cs" />
+    <Compile Include="Module\MinecireHelperModule.cs" />
+    <Compile Include="Module\MinecireHelperSession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Triggers\BronzeBerryCollectTrigger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ahorn\entities\MinecireSingleSpike.jl" />
+    <None Include="Ahorn\entities\Minecire3DigitSummitCheckpoint.jl" />
+    <None Include="Ahorn\entities\MinecireWideCustomSummitCheckpoint.jl" />
+    <None Include="Ahorn\entities\MinecireCustomSummitCheckpoint.jl" />
+    <None Include="everest.yaml" />
+    <None Include="Loenn\entities\BronzeBerry.lua" />
+    <None Include="Loenn\entities\customSummitCheckpoint.lua" />
+    <None Include="Loenn\triggers\BronzeBerryCollect.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle00.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle01.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle02.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle03.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle04.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle05.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle06.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle07.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle08.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle09.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle10.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle11.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\idle12.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish00.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish01.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish02.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish03.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish04.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish05.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish06.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish07.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish08.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish09.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish10.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish11.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\bronzeBerry\tarnish12.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\a\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\a\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\base00.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\base01.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\base02.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\berry\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\berry\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\blank\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\blank\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\b\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\b\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\c\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\c\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\d\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\d\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\eight\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\eight\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\exclaimation\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\exclaimation\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\e\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\e\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\five\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\five\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\four\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\four\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\f\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\f\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\g\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\g\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\h\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\h\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\i\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\i\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\j\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\j\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\k\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\k\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\l\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\l\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\minus\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\minus\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\m\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\m\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\nine\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\nine\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\n\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\n\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\onepoint\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\onepoint\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\one\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\one\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\o\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\o\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\plus\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\plus\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\point\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\point\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\p\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\p\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\questionmark\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\questionmark\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\q\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\q\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\roman_ii\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\roman_ii\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\roman_i\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\roman_i\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\r\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\r\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\seven\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\seven\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\six\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\six\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\star\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\star\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\s\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\s\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\three\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\three\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\two\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\two\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\t\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\t\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\u\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\u\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\v\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\v\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\w\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\w\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\x\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\x\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\y\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\y\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\zero\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\zero\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\z\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints\z\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\a\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\a\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\base00.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\base01.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\base02.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\berry\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\berry\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\blank\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\blank\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\b\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\b\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\c\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\c\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\d\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\d\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\eighteen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\eighteen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\eight\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\eight\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\eleven\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\eleven\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\exclaimation\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\exclaimation\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\e\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\e\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\fifteen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\fifteen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\five\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\five\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\fourteen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\fourteen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\four\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\four\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\f\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\f\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\g\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\g\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\h\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\h\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\i\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\i\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\j\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\j\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\k\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\k\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\l\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\l\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\minus\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\minus\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\m\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\m\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\nineteen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\nineteen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\nine\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\nine\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\n\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\n\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\onepoint\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\onepoint\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\one\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\one\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\o\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\o\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\plus\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\plus\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\point\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\point\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\p\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\p\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\questionmark\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\questionmark\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\q\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\q\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_iii\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_iii\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_ii\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_ii\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_iv\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_iv\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_i\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_i\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_vi\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_vi\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_v\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_v\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_x\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\roman_x\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\r\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\r\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\seventeen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\seventeen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\seven\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\seven\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\sixteen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\sixteen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\six\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\six\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\star\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\star\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\s\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\s\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\ten\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\ten\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\thirteen\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\thirteen\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\three\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\three\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\twelve\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\twelve\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\two\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\two\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\t\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\t\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\u\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\u\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\v\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\v\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\w\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\w\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\x\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\x\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\y\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\y\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\zero\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\zero\numberbg.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\z\number.png" />
+    <Content Include="Graphics\Atlases\Gameplay\MinecireHelper\summitcheckpoints_wide\z\numberbg.png" />
+    <Content Include="Graphics\Sprites.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

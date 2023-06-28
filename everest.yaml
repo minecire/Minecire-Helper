@@ -1,0 +1,6 @@
+- Name: minecirehelper
+  Version: 1.0.0
+  DLL: bin/Debug/Minecire Helper.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.3282.0

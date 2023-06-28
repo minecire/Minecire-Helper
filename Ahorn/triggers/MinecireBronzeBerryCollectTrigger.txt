@@ -1,0 +1,14 @@
+module MinecireBronzeBerryCollectTrigger
+
+using ..Ahorn, Maple
+
+@mapdef Trigger "MinecireHelper/BronzeBerryCollectTrigger" BronzeBerryCollectTrigger(x::Integer, y::Integer, width::Integer=Maple.defaultTriggerWidth, height::Integer=Maple.defaultTriggerHeight)
+
+const placements = Ahorn.PlacementDict(
+    "Bronze Berry Collect (Minecire Helper)" => Ahorn.EntityPlacement(
+        BronzeBerryCollectTrigger,
+        "rectangle",
+    ),
+)
+
+end
